@@ -1,0 +1,34 @@
+name: Inventura portfolia
+
+on:
+  workflow_dispatch: {}   # jen ruční spuštění — žádný cron ve fázi 0
+
+permissions:
+  contents: write
+
+concurrency:
+  group: steward
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inventura
+        env:
+          T212_API_KEY: ${{ secrets.T212_API_KEY }}
+          T212_API_SECRET: ${{ secrets.T212_API_SECRET }}
+        run: python3 scripts/inventory.py
+
+      - name: Commit výsledků
+        run: |
+          git config user.name "portfolio-steward"
+          git config user.email "steward@users.noreply.github.com"
+          git add data/ reports/
+          git diff --cached --quiet && echo "Žádné změny." && exit 0
+          git commit -m "Inventura $(date -u +%F)"
+          git pull --rebase origin main
+          git push
