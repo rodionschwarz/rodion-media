@@ -1,12 +1,14 @@
 # Portréty Rodiona Schwarze
 
-Dodáno 10. 11. 2026. Černobílé, ateliérové a jeden z ordinace.
+Dodáno 10. 11. 2026. Černobílé. Tři jako lékař a člověk, dvě k hudební tvorbě pod jménem Therapeut.
 
 | soubor | co je na něm | rozměr | poměr |
 |---|---|---|---|
 | `01-ordinace-plast-fonendoskop.jpg` | ordinace, bílý plášť, fonendoskop, anatomický plakát v pozadí, opřená pěst | 1199 × 1312 | 0,914 |
 | `02-atelier-sako.jpg` | ateliér, tmavé sako, bílá košile, kapesníček, polobok | 1086 × 1448 | 0,750 |
 | `03-atelier-rolak.jpg` | ateliér, černý rolák, přímý pohled do objektivu | 1086 × 1448 | 0,750 |
+| `04-dj-pult.jpg` | za pultem Pioneer, sluneční brýle, růženec, ruce nad deskami | 1254 × 1254 | 1,000 |
+| `05-skladatel-sluchatka.jpg` | sluchátka, kšiltovka, založené ruce, přímý pohled | 1254 × 1254 | 1,000 |
 
 ## Pravidlo použití
 
@@ -27,4 +29,7 @@ právě to podstatné, nejčastěji vršek hlavy nebo bradu.
 
 Před použitím je tedy nutné je **buď ořezat vědomě na 4 : 5**, nebo položit
 na papírové pozadí generátoru, jak popisuje `drafts/FORMAT.md`. Snímek `01`
-je širší než 4 : 5 a tenhle problém nemá.
+je širší než 4 : 5 a tenhle problém nemá. Snímky `04` a `05` jsou čtvercové,
+tedy také širší, ale na papíře vypadají lépe než samotné.
+
+Na papír je položí `scripts/portret_na_papir.py` v `rodion-brand-agent`.
